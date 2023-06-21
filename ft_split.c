@@ -6,7 +6,7 @@
 /*   By: aennaki <aennaki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 18:06:43 by aennaki           #+#    #+#             */
-/*   Updated: 2023/03/10 21:25:12 by aennaki          ###   ########.fr       */
+/*   Updated: 2023/06/21 05:45:04 by aennaki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,15 +79,15 @@ char	**ft_split(char const *s, char c)
 	return (dest);
 }
 
-int	main(void)
-{
-	char	**str;
-	int		i;
+// int	main(void)
+// {
+// 	char	**str;
+// 	int		i;
 
-	i = 0;
-	str = ft_split("   ", ' ');
-	puts("a");
-	while (str[i])
-		printf("#%s#\n", str[i++]);
-	return (0);
-}
+// 	i = 0;
+// 	str = ft_split("   ", ' ');
+// 	puts("a");
+// 	while (str[i])
+// 		printf("#%s#\n", str[i++]);
+// 	return (0);
+// }
