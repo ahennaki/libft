@@ -53,28 +53,48 @@ functions of Part 1.
 
 
 -> Function name ft_substr
+
 Prototype char *ft_substr(char const *s, unsigned int start, size_t len);
+
 Parameters s: The string from which to create the substring.
-start: The start index of the substring in the string ’s’.
-len: The maximum length of the substring.
+
+  start: The start index of the substring in the string ’s’.
+
+  len: The maximum length of the substring.
+
 Return value The substring. NULL if the allocation fails.
+
 External functs. malloc
+
 Description Allocates (with malloc(3)) and returns a substring from the string ’s’. The substring begins at index ’start’ and is of maximum size ’len’.
 
 
 -> Function name ft_strjoin
+
 Prototype char *ft_strjoin(char const *s1, char const *s2);
-Parameters s1: The prefix string. s2: The suffix string.
+
+Parameters s1: The prefix string.
+
+  s2: The suffix string.
+
 Return value The new string. NULL if the allocation fails.
+
 External functs. malloc
+
 Description Allocates (with malloc(3)) and returns a new string, which is the result of the concatenation of ’s1’ and ’s2’.
 
 
 -> Function name ft_strtrim
+
 Prototype char *ft_strtrim(char const *s1, char const *set);
-Parameters s1: The string to be trimmed. set: The reference set of characters to trim.
+
+Parameters s1: The string to be trimmed.
+  set: The reference set of characters to trim.
+
 Return value The trimmed string. NULL if the allocation fails.
+
 External functs. malloc
+
 Description Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters specified in ’set’ removed from the beginning and the end of the string.
 
 
