@@ -237,3 +237,122 @@ Return value None
 External functs. write
 
 Description Outputs the integer ’n’ to the given file descriptor.
+
+# Bonus part
+
+  You have to use the following structure to represent a node of your list. Add its
+declaration to your libft.h file:
+
+    typedef struct s_list
+    {
+    void *content;
+    struct s_list *next;
+    } t_list;
+
+    The members of the t_list struct are:
+    • content: The data contained in the node.
+    void * allows to store any kind of data.
+    • next: The address of the next node, or NULL if the next node is the last one.
+
+Implement the following functions in order to easily use your lists.
+
+
+-> Function name ft_lstnew
+Prototype t_list *ft_lstnew(void *content);
+Parameters content: The content to create the node with.
+Return value The new node
+External functs. malloc
+Description Allocates (with malloc(3)) and returns a new node. The member variable ’content’ is initialized with the value of the parameter ’content’. The variable ’next’ is initialized to NULL.
+
+
+->Function name ft_lstadd_front
+Prototype void ft_lstadd_front(t_list **lst, t_list *new);
+Parameters lst: The address of a pointer to the first link of
+a list.
+new: The address of a pointer to the node to be
+added to the list.
+Return value None
+External functs. None
+Description Adds the node ’new’ at the beginning of the list.
+Function name ft_lstsize
+Prototype int ft_lstsize(t_list *lst);
+Turn in files -
+Parameters lst: The beginning of the list.
+Return value The length of the list
+External functs. None
+Description Counts the number of nodes in a list.
+Function name ft_lstlast
+Prototype t_list *ft_lstlast(t_list *lst);
+Turn in files -
+Parameters lst: The beginning of the list.
+Return value Last node of the list
+External functs. None
+Description Returns the last node of the list.
+12
+Libft Your very first own library
+Function name ft_lstadd_back
+Prototype void ft_lstadd_back(t_list **lst, t_list *new);
+Turn in files -
+Parameters lst: The address of a pointer to the first link of
+a list.
+new: The address of a pointer to the node to be
+added to the list.
+Return value None
+External functs. None
+Description Adds the node ’new’ at the end of the list.
+Function name ft_lstdelone
+Prototype void ft_lstdelone(t_list *lst, void (*del)(void
+*));
+Turn in files -
+Parameters lst: The node to free.
+del: The address of the function used to delete
+the content.
+Return value None
+External functs. free
+Description Takes as a parameter a node and frees the memory of
+the node’s content using the function ’del’ given
+as a parameter and free the node. The memory of
+’next’ must not be freed.
+Function name ft_lstclear
+Prototype void ft_lstclear(t_list **lst, void (*del)(void
+*));
+Turn in files -
+Parameters lst: The address of a pointer to a node.
+del: The address of the function used to delete
+the content of the node.
+Return value None
+External functs. free
+Description Deletes and frees the given node and every
+successor of that node, using the function ’del’
+and free(3).
+Finally, the pointer to the list must be set to
+NULL.
+13
+Libft Your very first own library
+Function name ft_lstiter
+Prototype void ft_lstiter(t_list *lst, void (*f)(void *));
+Turn in files -
+Parameters lst: The address of a pointer to a node.
+f: The address of the function used to iterate on
+the list.
+Return value None
+External functs. None
+Description Iterates the list ’lst’ and applies the function
+’f’ on the content of each node.
+Function name ft_lstmap
+Prototype t_list *ft_lstmap(t_list *lst, void *(*f)(void *),
+void (*del)(void *));
+Turn in files -
+Parameters lst: The address of a pointer to a node.
+f: The address of the function used to iterate on
+the list.
+del: The address of the function used to delete
+the content of a node if needed.
+Return value The new list.
+NULL if the allocation fails.
+External functs. malloc, free
+Description Iterates the list ’lst’ and applies the function
+’f’ on the content of each node. Creates a new
+list resulting of the successive applications of
+the function ’f’. The ’del’ function is used to
+delete the content of a node if needed.
