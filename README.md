@@ -58,9 +58,9 @@ Prototype char *ft_substr(char const *s, unsigned int start, size_t len);
 
 Parameters s: The string from which to create the substring.
 
-        start: The start index of the substring in the string ’s’.
+    start: The start index of the substring in the string ’s’.
 
-  len: The maximum length of the substring.
+    len: The maximum length of the substring.
 
 Return value The substring. NULL if the allocation fails.
 
