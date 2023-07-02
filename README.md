@@ -284,7 +284,7 @@ Implement the following functions in order to easily use your lists.
 
 **External functs:** None
 
-Description Adds the node ’new’ at the beginning of the list.
+**Description:** Adds the node ’new’ at the beginning of the list.
 
 
 ### => ft_lstsize
