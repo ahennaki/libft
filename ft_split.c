@@ -78,16 +78,3 @@ char	**ft_split(char const *s, char c)
 	dest[i] = NULL;
 	return (dest);
 }
-
-// int	main(void)
-// {
-// 	char	**str;
-// 	int		i;
-
-// 	i = 0;
-// 	str = ft_split("   ", ' ');
-// 	puts("a");
-// 	while (str[i])
-// 		printf("#%s#\n", str[i++]);
-// 	return (0);
-// }
