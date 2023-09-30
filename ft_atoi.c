@@ -19,17 +19,17 @@ int	ft_atoi(const char *str)
 	int	signe;
 
 	i = 0;
-	while (str[i] && ((str[i] >= 9 && str[i] <= 13) || str[i] == 32))
+	while (str && str[i] && ((str[i] >= 9 && str[i] <= 13) || str[i] == 32))
 		i++;
 	signe = 1;
-	if (str[i] == '-' || str[i] == '+')
+	if (str && (str[i] == '-' || str[i] == '+'))
 	{
 		if (str[i] == '-')
 			signe = -1;
 		i++;
 	}
 	res = 0;
-	while (str[i] >= 48 && str[i] <= 57)
+	while (str && str[i] >= 48 && str[i] <= 57)
 	{
 		res *= 10;
 		res += (str[i] - 48);
