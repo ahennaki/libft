@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/*
+The strlcpy() function copies up to size - 1 characters from the NUL-terminated
+string src to dst, NUL-terminating the result.
+function return the total length of the string they tried to create. That means
+the length of src.
+In case of size = 0, the function return the length of src without doing anything.
+*/
+
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
