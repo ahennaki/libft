@@ -10,7 +10,6 @@ Welcome to libft, a comprehensive C library that provides a collection of essent
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
